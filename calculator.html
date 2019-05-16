@@ -1,0 +1,130 @@
+<html>
+
+<head>
+    <script>
+        //function that display value 
+        function dis(val) {
+            document.getElementById("result").value += val
+        }
+
+        //function that evaluates the digit and return result 
+        function solve() {
+            let x = document.getElementById("result").value
+            let y = eval(x)
+            document.getElementById("result").value = y
+        }
+
+        //function that clear the display 
+        function clr() {
+            document.getElementById("result").value = ""
+        } 
+    </script>
+    <style>
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background-color: black;
+            text-align: center;
+            color: white;
+            font-size: 120px;
+        }
+
+        body {
+            background-color: lightpink;
+            /* You must set a specified height */
+            background-position: center;
+            /* Center the image */
+            background-repeat: no-repeat;
+            /* Do not repeat the image */
+            background-size: cover;
+        }
+
+        table {
+            border-collapse: collapse;
+            height: 200px;
+            width: 300px;
+            margin-top: 300px;
+        }
+
+        td {
+            width: 20px;
+            height: 20px;
+        }
+
+        th {
+            height: 50px;
+            border-collapse: collapse;
+        }
+
+        input[type="button"] {
+            background-color: rgb(95, 228, 78);
+            color: black;
+            border: solid black 2px;
+            width: 100%;
+            height: 100%;
+        }
+
+        input[type="text"] {
+            background-color: white;
+            border: solid black 2px;
+            width: 100%;
+            height: 100%;
+            font-size: 25px;
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height:25px ;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>claculator</header>
+    <div>
+        <table border="1" align="center">
+            <tr>
+                <th colspan="3"><input type="text" id="result" /></th>
+                <th><input type="button" value="c" onclick="clr()" /> </th>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="dis('7')" /> </td>
+                <td><input type="button" value="8" onclick="dis('8')" /> </td>
+                <td><input type="button" value="9" onclick="dis('9')" /> </td>
+                <td><input type="button" value="/" onclick="dis('/')" /> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="dis('4')" /> </td>
+                <td><input type="button" value="5" onclick="dis('5')" /> </td>
+                <td><input type="button" value="6" onclick="dis('6')" /> </td>
+                <td><input type="button" value="*" onclick="dis('*')" /> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="dis('1')" /> </td>
+                <td><input type="button" value="2" onclick="dis('2')" /> </td>
+                <td><input type="button" value="3" onclick="dis('3')" /> </td>
+                <td><input type="button" value="-" onclick="dis('-')" /> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="." onclick="dis('.')" /> </td>
+                <td><input type="button" value="0" onclick="dis('0')" /> </td>
+                <td><input type="button" value="=" onclick="solve()" /> </td>
+                <td><input type="button" value="+" onclick="dis('+')" /> </td>
+            </tr>
+        </table>
+    </div>
+    <footer>
+        @srinivas
+    </footer>
+</body>
+
+</html>
